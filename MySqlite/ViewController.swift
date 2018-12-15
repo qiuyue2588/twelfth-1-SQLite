@@ -40,7 +40,10 @@ class ViewController: UIViewController {
         print("result:\(r)")
     }
     @IBAction func query(_ sender: Any) {
-       
+       let persons = db.query(sql: "select * from person where name = '\(stuName.text!)'")
+        if let person = persons.first,let phone = person["phone"] as? String {
+            stuPhone.text = phone
+        }
     }
 }
 
