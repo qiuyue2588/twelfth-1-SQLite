@@ -13,6 +13,10 @@
 		3FB9211B21C4990300D587B4 /* MySqlite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9211921C4990300D587B4 /* MySqlite.xcdatamodeld */; };
 		3FB9211D21C4990500D587B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9211C21C4990500D587B4 /* Assets.xcassets */; };
 		3FB9212021C4990500D587B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9211E21C4990500D587B4 /* LaunchScreen.storyboard */; };
+		3FB9212C21C49AFD00D587B4 /* SQLiteBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9212721C49AFD00D587B4 /* SQLiteBase.swift */; };
+		3FB9212D21C49AFD00D587B4 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9212921C49AFD00D587B4 /* SQLTable.swift */; };
+		3FB9212E21C49AFD00D587B4 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9212A21C49AFD00D587B4 /* SQLiteDB.swift */; };
+		3FB9212F21C49AFD00D587B4 /* CloudDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9212B21C49AFD00D587B4 /* CloudDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		3FB9211C21C4990500D587B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FB9211F21C4990500D587B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FB9212121C4990500D587B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB9212721C49AFD00D587B4 /* SQLiteBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteBase.swift; sourceTree = "<group>"; };
+		3FB9212821C49AFD00D587B4 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		3FB9212921C49AFD00D587B4 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		3FB9212A21C49AFD00D587B4 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		3FB9212B21C49AFD00D587B4 /* CloudDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 		3FB9211121C4990300D587B4 /* MySqlite */ = {
 			isa = PBXGroup;
 			children = (
+				3FB9213121C49B2500D587B4 /* DB */,
 				3FB9211221C4990300D587B4 /* AppDelegate.swift */,
 				3FB9211421C4990300D587B4 /* ViewController.swift */,
 				3FB9211621C4990300D587B4 /* Main.storyboard */,
@@ -65,6 +75,18 @@
 				3FB9211921C4990300D587B4 /* MySqlite.xcdatamodeld */,
 			);
 			path = MySqlite;
+			sourceTree = "<group>";
+		};
+		3FB9213121C49B2500D587B4 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				3FB9212821C49AFD00D587B4 /* Bridging-Header.h */,
+				3FB9212B21C49AFD00D587B4 /* CloudDB.swift */,
+				3FB9212721C49AFD00D587B4 /* SQLiteBase.swift */,
+				3FB9212A21C49AFD00D587B4 /* SQLiteDB.swift */,
+				3FB9212921C49AFD00D587B4 /* SQLTable.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB9212F21C49AFD00D587B4 /* CloudDB.swift in Sources */,
+				3FB9212C21C49AFD00D587B4 /* SQLiteBase.swift in Sources */,
 				3FB9211521C4990300D587B4 /* ViewController.swift in Sources */,
 				3FB9211B21C4990300D587B4 /* MySqlite.xcdatamodeld in Sources */,
+				3FB9212E21C49AFD00D587B4 /* SQLiteDB.swift in Sources */,
 				3FB9211321C4990300D587B4 /* AppDelegate.swift in Sources */,
+				3FB9212D21C49AFD00D587B4 /* SQLTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

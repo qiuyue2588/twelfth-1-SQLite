@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +12,74 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MySqlite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GDx-ux-fUh">
+                                <rect key="frame" x="139" y="120" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SUc-4z-MkO">
+                                <rect key="frame" x="139" y="195" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="BzO-b7-eNG">
+                                <rect key="frame" x="39" y="318" width="297" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHS-Rq-w7e">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUq-Xv-xXb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lr9-3H-3mG">
+                                        <rect key="frame" x="78" y="0.0" width="51" height="30"/>
+                                        <state key="normal" title="Update"/>
+                                        <connections>
+                                            <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Rl-xB-gXM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiX-TB-CRI">
+                                        <rect key="frame" x="177" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Del"/>
+                                        <connections>
+                                            <action selector="del:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KA5-X3-Ae3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJe-ug-bXJ">
+                                        <rect key="frame" x="255" y="0.0" width="42" height="30"/>
+                                        <state key="normal" title="Query"/>
+                                        <connections>
+                                            <action selector="query:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bk7-JE-haH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GDx-ux-fUh" firstAttribute="trailing" secondItem="SUc-4z-MkO" secondAttribute="trailing" id="4WM-FV-TtH"/>
+                            <constraint firstItem="BzO-b7-eNG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CmX-o8-wla"/>
+                            <constraint firstItem="GDx-ux-fUh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="LH0-TY-IoU"/>
+                            <constraint firstItem="GDx-ux-fUh" firstAttribute="leading" secondItem="SUc-4z-MkO" secondAttribute="leading" id="ZAl-r4-n4F"/>
+                            <constraint firstItem="GDx-ux-fUh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="f7d-SD-MJw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BzO-b7-eNG" secondAttribute="bottom" constant="319" id="gYm-qS-PcX"/>
+                            <constraint firstItem="SUc-4z-MkO" firstAttribute="top" secondItem="GDx-ux-fUh" secondAttribute="bottom" constant="45" id="lZM-k2-VVV"/>
+                            <constraint firstItem="GDx-ux-fUh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sLg-bW-DoO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="stuName" destination="GDx-ux-fUh" id="Ptm-ju-kKl"/>
+                        <outlet property="stuPhone" destination="SUc-4z-MkO" id="LXU-ji-VLY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
