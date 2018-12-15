@@ -17,6 +17,7 @@
 		3FB9212D21C49AFD00D587B4 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9212921C49AFD00D587B4 /* SQLTable.swift */; };
 		3FB9212E21C49AFD00D587B4 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9212A21C49AFD00D587B4 /* SQLiteDB.swift */; };
 		3FB9212F21C49AFD00D587B4 /* CloudDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9212B21C49AFD00D587B4 /* CloudDB.swift */; };
+		3FB9213321C49ED500D587B4 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9213221C49ED500D587B4 /* data.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		3FB9212921C49AFD00D587B4 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
 		3FB9212A21C49AFD00D587B4 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
 		3FB9212B21C49AFD00D587B4 /* CloudDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDB.swift; sourceTree = "<group>"; };
+		3FB9213221C49ED500D587B4 /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		3FB9213121C49B2500D587B4 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				3FB9213221C49ED500D587B4 /* data.db */,
 				3FB9212821C49AFD00D587B4 /* Bridging-Header.h */,
 				3FB9212B21C49AFD00D587B4 /* CloudDB.swift */,
 				3FB9212721C49AFD00D587B4 /* SQLiteBase.swift */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB9212021C4990500D587B4 /* LaunchScreen.storyboard in Resources */,
+				3FB9213321C49ED500D587B4 /* data.db in Resources */,
 				3FB9211D21C4990500D587B4 /* Assets.xcassets in Resources */,
 				3FB9211821C4990300D587B4 /* Main.storyboard in Resources */,
 			);
@@ -320,6 +324,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-016110314.MySqlite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MySqlite/DB/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +342,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-016110314.MySqlite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MySqlite/DB/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
